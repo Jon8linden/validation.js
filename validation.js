@@ -95,7 +95,7 @@ var form_validate = {
 
             // number might not be required
             if (val != "") {
-                var filter = /^[0-9]*$/;
+                var filter = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;
                 if (!filter.test(val)) {
                     $el.addClass(failed_class);
                     response = ['Please put in a valid phone number. Numbers only are allowed.', false];
